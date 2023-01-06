@@ -10,8 +10,11 @@ body {
     flex-wrap: wrap;
     background-color: #CF2B2B;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
     position: fixed;
-    z-index: 1;
+    top: 0;
+
+
 }
 
 .cabecalho p {
@@ -35,7 +38,9 @@ body {
 /*--- Formatação do container ---*/
 .container {
     padding-top: 104px;
-
+    width: 414px;
+    overflow: hidden;
+    margin-bottom: 72px;
 }
 
 .container h2 {
@@ -50,14 +55,13 @@ body {
 
 .menu {
     font-family: 'Roboto', sans-serif;
-    width: 550px;
+    width: 414px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    overflow-x: scroll;
     margin-top: 15px;
     margin-bottom: 50px;
     margin-left: 19px;
+    margin-right: 19px;
 }
 
 .prato1 {
@@ -73,7 +77,8 @@ body {
     height: 216px;
     width: 172px;
     border-radius: 9px;
-    box-shadow: 0px 0px 10px -4px
+    box-shadow: 0px 0px 10px -4px;
+    margin: 0px 16px;
 }
 
 .prato3 {
@@ -112,18 +117,27 @@ body {
     padding: 0px 13px;
 }
 
+/*ocultar barra de rolagem*/
+*::-webkit-scrollbar {
+    display: none;
+}
+
 /*--- Formatação do rodape ---*/
 .rodape {
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
     height: 92px;
     width: 414px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: fixed;
+    bottom: 0;
 }
-.selecionar-pedido{
-    background-color:#CBCBCB;
+
+.selecionar-pedido {
+    background-color: #CBCBCB;
     height: 61px;
     width: 364px;
     border-radius: 50px;
@@ -132,8 +146,10 @@ body {
     justify-content: center;
     align-items: center;
 }
-.selecionar-pedido div > h4, h5{
-    color:#FFFFFF;
+
+.selecionar-pedido div>h4,
+h5 {
+    color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
